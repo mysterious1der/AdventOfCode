@@ -4,7 +4,20 @@ $i = 1
 
 foreach ($num1 in $inputArray1) {
     $temp = [int][Math]::Floor($num1 / 3) - 2
-    $sum += $temp 
+    $sum += $temp
+    if ( $temp -ge 9 )
+        {
+        # loop here
+        # $sum += $temp
+        }
+
+
+
+
+
+
+
+    
     $i++
 }
 

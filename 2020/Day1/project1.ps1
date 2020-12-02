@@ -1,6 +1,6 @@
-﻿[int[]]$inputArray1 = Get-Content -Path 'C:\Users\Jirah\Documents\GitHub\AdventOfCode2020\Day1\Project1\project1input.txt'
-[int[]]$inputArray2 = Get-Content -Path 'C:\Users\Jirah\Documents\GitHub\AdventOfCode2020\Day1\Project1\project1input.txt'
-[int[]]$inputArray3 = Get-Content -Path 'C:\Users\Jirah\Documents\GitHub\AdventOfCode2020\Day1\Project1\project1input.txt'
+﻿[int[]]$inputArray1 = Get-Content -Path 'C:\Users\Jirah\Documents\GitHub\AdventOfCode2020\Day1\project1input.txt'
+[int[]]$inputArray2 = Get-Content -Path 'C:\Users\Jirah\Documents\GitHub\AdventOfCode2020\Day1\project1input.txt'
+[int[]]$inputArray3 = Get-Content -Path 'C:\Users\Jirah\Documents\GitHub\AdventOfCode2020\Day1\project1input.txt'
 
 $i1 = 1
 $i2 = 1
