@@ -1,30 +1,14 @@
-﻿$input = Get-Content C:\Users\Jirah\Documents\GitHub\AdventOfCode\2020\Day3\input.txt 
-$countlines = $input | Measure-Object -Line | Select-Object -expandProperty Lines
-$countcols = $input[0] | Measure-Object -Character | Select-Object -expandProperty Characters
+﻿$input = [IO.File]::ReadAllText("C:\Users\Jirah\Documents\GitHub\AdventOfCode\2020\Day4\input.txt")
 
-#write-host $countlines
-#Write-Host $countcols
+$array = $input -split '\r?\n\r?\n'
 
-#write-host $input[0]
-write-host $input[11].Substring(0,1)
-
-#for (($x = 0), ($y = 0); $y -lt $count)
-for (($x = 0), ($y = 0), ($trees = 0); $y -lt $countlines-1)
+for (($x = 0), ($valid = 0); $x -lt $array.Count)
 {
-    $x += 3
-    $y ++
-
-
-    if ($x -ge $countcols) {
-        $x = $x - $countcols
-    }
-
-    #write-host "On line" $y ", X is" $x
-    Write-Host "Character at pos" $x "on line" $y "is" $input[$y].Substring($x,1)
-   
-    if ($input[$y].Substring($x,1) -eq "#")
+    if ($array[$x] -like '*byr:*' -and $array[$x] -like '*iyr:*' -and $array[$x] -like '*eyr:*' -and $array[$x] -like '*hgt:*' -and $array[$x] -like '*hcl:*' -and $array[$x] -like '*ecl:*' -and $array[$x] -like '*pid:*')
     {
-        $trees++
+        $valid++
     }
+    $x++
 }
-write-host "You hit" $trees "trees"
+
+Write-Host $valid "valid passports"
