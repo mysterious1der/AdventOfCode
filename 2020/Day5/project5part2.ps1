@@ -26,14 +26,13 @@ $seatarraystrings = $seatidlist | Foreach {"$($_.SeatID)"}
     }
 }
 
-#for (($x = 0), ($valid = 0); $x -lt $array.Count)
 for ($x = 0; $x -lt $seatarray.Count)
 {
     $neighborabove = $x + 1
     $neighborbelow = $x - 1
     if ($seatarray.Contains($neighborabove) -and $seatarray.Contains($neighborbelow) -and $seatarray -notcontains $x)
     {
-        Write-Host "Seat ID is" $x
+        Write-Host "Your seat ID is" $x
     }
     $x++
 }
