@@ -31,7 +31,6 @@ for (($x = 0), ($valid = 0); $x -lt $array.Count)
                                         if ($hash["hgt"].Substring(0,3) -ge 150 -and $hash["hgt"].Substring(0,3) -le 193)
                                         {
                                             $valid++
-                                            Write-Host $hash["hgt"].Substring(0,3) "centimeters is valid"
                                         }
                                     }
                                     in 
@@ -39,7 +38,6 @@ for (($x = 0), ($valid = 0); $x -lt $array.Count)
                                         if ($hash["hgt"].Substring(0,2) -ge 59 -and $hash["hgt"].Substring(0,2) -le 76)
                                         {
                                             $valid++
-                                            Write-Host $hash["hgt"].Substring(0,2) "inches is valid"
                                         }
                                     }
                                     Default
